@@ -10,3 +10,11 @@ Adding documentation HTML pages to track
 - things that are nice to revisit
 - things that were clear but need to be written down anyway
 
+
+Do's 
+- Static pages
+
+Dont's
+- Not a place for boilerplate
+- Not a place for bootstrappers
+- Not a place for ideas
