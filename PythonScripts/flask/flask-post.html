@@ -1,0 +1,93 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+</head>
+
+<body style="color: white; background-color: black; font-size: 1vw; font-family: monospace; margin-left: 2vw; margin-top: 2vw; line-height: 1.1; width: 95%; min-width: 95%; max-width: 95%; overflow-x: hidden;">
+
+<script>
+
+globalThis.contentData = [
+[
+"Why Flask",
+`
+Simpler alternatives are available that handle basic HTTP GET requests.
+
+Flask is lightweight.
+
+What is the core of this lightweight python server?
+
+Handling HTTP Post requests and HTTP headers requires a JSON parser.
+
+Handling production needs WSGI and CORS support.
+
+Handling requests in Async requires threading support.
+
+A basic HTTP server would not handle async requests, it would be blocking, it would not support post request parameters and long data transfer.
+
+Hence Flask. Although a web socket still seems more tempting, it is not long term hassle free solution.
+`
+],
+[
+"References",
+`
+Flask Docs
+HTTP Servers
+JSON Serialization and Deserialization
+Threading
+Async
+WSGI
+Python Docs
+`
+]
+];
+
+globalThis.document.getElementsByTagName("title")[0].innerHTML = "Flask HTTP Post Server";
+
+globalThis.setBody = function() {
+
+globalThis.contentString = ``;
+
+for (let sectionData of contentData) {
+globalThis.contentString = [
+globalThis.contentString,
+"<div>",
+`<div style="font-size: 2vw; font-weight: bold;">`,
+sectionData[0],
+`</div>`,
+"<ul>",
+sectionData[1].trim().split("\n").map(lineX => {
+if (lineX.trim().length === 0){
+return "";
+}
+return "<li>" + lineX + "</li>";
+}).join(""),
+"</ul>",
+"</div>"
+].join("")
+
+}
+
+globalThis.document.getElementsByTagName("body")[0].innerHTML = globalThis.contentString;
+};
+
+
+globalThis.window.onload = function() {
+globalThis.postload = function() {
+globalThis.setBody();
+};
+globalThis.postload();
+};
+
+
+	
+</script>
+</body>
+
+</html>
+
+
