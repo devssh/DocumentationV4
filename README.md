@@ -17,4 +17,4 @@ Do's
 Dont's
 - Not a place for boilerplate
 - Not a place for bootstrappers
-- Not a place for ideas
+- Not a place for ideas, task lists, todo lists

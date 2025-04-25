@@ -1,0 +1,142 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+</head>
+
+<body style="color: white; background-color: black; font-size: 1vw; font-family: monospace; margin-left: 2vw; margin-top: 2vw; line-height: 1.1; width: 95%; min-width: 95%; max-width: 95%; overflow-x: hidden;">
+
+<script>
+
+globalThis.htmlTitleTag = "Design patterns";
+
+globalThis.contentData = [
+[
+"Patterns build objects and IOC list asap",
+`
+Imperative pattern - return nothing or 200 immediately with IOC
+Flywheel pattern - use types to reduce send and storing large data
+Specification pattern - use to add and update rules, checks, conditionals like a factory.add returns bitmask
+Memento pattern - to manage state history
+State pattern - create states
+Event pattern - create event to handle state change
+Functional pattern - stateless
+`
+],
+[
+"Useful patterns",
+`
+Useful pattern
+Builder for step by step and Factory for generator
+Facade for simplifying UI req params
+Decorator for wrapping all functions with an env variable tweak config
+Observer - Publisher/Subscriber
+Strategy - change strategies, swap, select conditionally
+Visitor - sending eval strings and objects to a client on network at runtime
+Lazy pattern - background tasks
+Proxy pattern - useful to verify credentials
+Command pattern - already using it to pass key value requests for RPC
+Object pool - an LRU/strategy cache and delete keys		
+`
+],
+[
+"Bad pattern in dynamic languages for speed and small size",
+`
+Structure(import export) pattern vs behaviour(boundary communication, cloning, message passing vs globalObject) pattern
+
+Abstract - overgeneralized common utils trying to do too much not required
+Only needed to type check in static type checking languages.
+Not required when object is not type checked in JS or Python.
+Wastes time
+Good if no usage documentation or tests to write a basic document.
+
+Composite pattern
+Wastes time - why build traits to reuse
+
+
+Refactoring techniques - smells
+Look at bloaters
+`],
+[
+"Tasks - remove it",
+`
+Server sending request and state and cache to each other.
+Server for background tasks.
+File management with integrity.
+Letter swapper or keycode for character modification
+
+Move the bytes functions to its file.
+
+
+Update a document on Testing vs Usage like API contract vs E2E
+
+Use REQNAME instead of URL
+
+RPC syntax benefits
+Cache request benefits
+
+Instead of URL use a flag other than REQNAME like REQTYPE
+execute
+execute-read
+execute-multi
+execute-background
+`],
+[
+"References",
+`
+CodeSmells
+Refactoring books
+Design books
+Wiki
+`
+]
+];
+
+globalThis.document.getElementsByTagName("title")[0].innerHTML = globalThis.htmlTitleTag;
+
+globalThis.setBody = function() {
+
+globalThis.contentString = ``;
+
+for (let sectionData of contentData) {
+globalThis.contentString = [
+globalThis.contentString,
+"<div>",
+`<div style="font-size: 2vw; font-weight: bold;">`,
+sectionData[0],
+`</div>`,
+"<ul>",
+sectionData[1].trim().split("\n").map(lineX => {
+if (lineX.trim().length === 0){
+return "";
+}
+return "<li>" + lineX + "</li>";
+}).join(""),
+"</ul>",
+"</div>"
+].join("")
+
+}
+
+globalThis.document.getElementsByTagName("body")[0].innerHTML = globalThis.contentString;
+};
+
+
+globalThis.window.onload = function() {
+globalThis.postload = function() {
+globalThis.setBody();
+};
+globalThis.postload();
+};
+
+
+	
+</script>
+</body>
+
+</html>
+
+
